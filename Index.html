@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Dario Beltrami | Portfolio Tecnico</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Griglia blueprint tecnica sovrapposta per richiamare i software di progettazione */
+        body {
+            background: 
+                linear-gradient(rgba(10, 15, 25, 0.94), rgba(10, 15, 25, 0.94)),
+                linear-gradient(rgba(6, 182, 212, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(6, 182, 212, 0.04) 1px, transparent 1px),
+                url('https://www.mectalent.com/hs-fs/hubfs/Nettikuvat%20ja%20videot/Mectalent-mekaniikkasuunnittelu-tehtavat-1837x1246.jpeg?width=2756&height=1869&name=Mectalent-mekaniikkasuunnittelu-tehtavat-1837x1246.jpeg');
+            background-size: cover, 40px 40px, 40px 40px, cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Inter', sans-serif;
+            color: #e2e8f0;
+        }
+
+        /* */
+        /* Stile Neon Glow con sfumatura del bordo e retroilluminazione dinamica */
+        .shadow-neon {
+            box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.35), 
+                        0 0 15px rgba(6, 182, 212, 0.05),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+        .shadow-neon:hover {
+            box-shadow: 0 15px 45px -5px rgba(6, 182, 212, 0.5), 
+                        0 0 25px rgba(6, 182, 212, 0.25),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+
+        /* Classe base Glassmorphism ad alta definizione */
+        .glass {
+            background: rgba(13, 20, 35, 0.45);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(6, 182, 212, 0.12);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass:hover {
+            border-color: rgba(6, 182, 212, 0.4);
+            background: rgba(13, 20, 35, 0.6);
+        }
+
+        .code-font {
+            font-family: 'Fira Code', monospace;
+        }
+
+        /* Scrollbar personalizzata a tema futuristico */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(10, 15, 25, 0.5);
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(6, 182, 212, 0.3);
+            border-radius: 9999px;
+            border: 2px solid rgba(10, 15, 25, 0.5);
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(6, 182, 212, 0.6);
+        }
+
+        /* Animazione ingranaggio rotante su hover */
+        .gear-spin:hover .fa-gear {
+            animation: spin 4s linear infinite;
+        }
+
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="min-h-screen pb-24 selection:bg-cyan-500/30 selection:text-cyan-200 custom-scrollbar">
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 pt-12">
+        
+        <!-- -->
+        <!-- Header di Dario con stile Neon Glow Premium -->
+        <header class="glass shadow-neon rounded-3xl p-6 sm:p-10 mb-8 border-l-8 border-cyan-500 relative overflow-hidden transition-all duration-500" id="main-header">
+            <!-- Cerchio luminoso d'accento di sfondo -->
+            <div class="absolute top-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl -z-10"></div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 relative z-10">
+                <div>
+                    <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tighter mb-2 bg-gradient-to-r from-white via-slate-100 to-slate-400 bg-clip-text text-transparent">DARIO BELTRAMI</h1>
+                    <p class="text-cyan-400 font-mono tracking-widest uppercase text-xs sm:text-sm font-semibold mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-compass-drafting animate-pulse"></i> Mechanical Design & 3D Modelling Specialist
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs sm:text-sm text-slate-300">
+                        <span class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-cyan-500 w-4"></i> Brescia, Italia</span>
+                        <a href="mailto:d.beltrami@gmail.com" class="flex items-center gap-2 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-envelope text-cyan-500 w-4"></i> d.beltrami@gmail.com</a>
+                        <a href="tel:+393281022406" class="flex items-center gap-2 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-phone text-cyan-500 w-4"></i> +39 328 10 22 406</a>
+                        <a href="https://www.linkedin.com/in/dario-beltrami-50409733b" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-cyan-400 transition-colors"><i class="fa-brands fa-linkedin text-cyan-500 w-4 text-base"></i> Profilo LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Griglia Principale delle Informazioni -->
+        <div class="grid lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-2 space-y-8">
+                
+                <!-- -->
+                <!-- Sezione Esperienze con Linea del Tempo interattiva -->
+                <section class="glass shadow-neon rounded-3xl p-6 sm:p-8 border border-white/10" id="sec-experience">
+                    <div class="flex items-center gap-3 mb-6 gear-spin">
+                        <div class="w-8 h-8 rounded-lg bg-cyan-500/20 flex items-center justify-center text-cyan-400 transition-transform">
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+                        <h2 class="text-xl font-bold text-white uppercase tracking-wider">Esperienza Professionale</h2>
+                    </div>
+                    
+                    <div class="relative border-l-2 border-slate-700 ml-3 pl-6 space-y-8">
+                        <!-- Esperienza 1 -->
+                        <div class="relative group">
+                            <!-- Nodo temporale attivo e pulsante di bagliore -->
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-cyan-500 border-4 border-slate-900 group-hover:scale-125 transition-transform duration-300 shadow-lg shadow-cyan-500/50"></div>
+                            <h3 class="font-bold text-lg text-white group-hover:text-cyan-400 transition-colors">FBG S.r.l. Blendplants</h3>
+                            <p class="text-cyan-400 text-sm italic font-medium">2015 - Oggi | Disegnatore Meccanico Senior</p>
+                            <ul class="list-disc list-inside text-slate-300 text-sm mt-3 space-y-2 leading-relaxed">
+                                <li>Modellazione 3D (<span class="text-cyan-300 font-mono text-xs">Autodesk Inventor</span>) e gestione di complessi accoppiamenti assiemi di macchine industriali.</li>
+                                <li>Progettazione esecutiva di carpenteria metallica pesante e leggera, sviluppo lamiere e compilazione distinte base.</li>
+                                <li>Controllo qualità e verifica esecuzioni geometriche in officina.</li>
+                                <li>Attività di Ricerca & Sviluppo prototipi avanzati con supporto alla stampa 3D per test funzionali.</li>
+                            </ul>
+                        </div>
+                        <!-- Esperienza 2 -->
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-600 border-4 border-slate-900 group-hover:bg-cyan-400 group-hover:scale-125 transition-all duration-300"></div>
+                            <h3 class="font-bold text-lg text-white group-hover:text-cyan-400 transition-colors">Baires S.r.l.</h3>
+                            <p class="text-cyan-400 text-sm italic font-medium">2012 - 2015 | Ufficio Tecnico</p>
+                            <p class="text-slate-300 text-sm mt-2 leading-relaxed">
+                                Progettazione di carpenterie speciali e strutture idrauliche per piscine di fascia alta. Gestione della renderizzazione fotorealistica per presentazioni clienti, direzione tecnica dei cantieri di installazione e rilievi laser di precisione in loco.
+                            </p>
+                        </div>
+                        <!-- Esperienza 3 -->
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-600 border-4 border-slate-900 group-hover:bg-cyan-400 group-hover:scale-125 transition-all duration-300"></div>
+                            <h3 class="font-bold text-lg text-white group-hover:text-cyan-400 transition-colors">Dracoprogetti S.r.l.</h3>
+                            <p class="text-cyan-400 text-sm italic font-medium">2002 - 2010 | Disegno e Modellazione 3D</p>
+                            <p class="text-slate-300 text-sm mt-2 leading-relaxed">
+                                Modellazione tridimensionale ed elaborazione tavole grafiche e strutturali per importanti progetti architettonici e di intrattenimento, inclusi l'Outlet Fashion District e parchi a tema di livello nazionale (Rainbow Magicland, Miragica).
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- -->
+                <!-- Sezione Portfolio con miniature reali di YouTube -->
+                <section id="sec-portfolio" class="glass shadow-neon rounded-3xl p-6 sm:p-8 border border-white/10">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-8 h-8 rounded-lg bg-cyan-500/20 flex items-center justify-center text-cyan-400">
+                            <i class="fa-solid fa-gears"></i>
+                        </div>
+                        <h2 class="text-xl font-bold text-white uppercase tracking-wider">Portfolio Progetti</h2>
+                    </div>
+                    
+                    <div class="grid sm:grid-cols-2 gap-6">
+
+                        <!-- Card 1: London Underground -->
+                        <div class="bg-black/35 p-4 rounded-2xl border border-white/5 hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/5 transition-all flex flex-col justify-between group">
+                            <div>
+                                <!-- Miniatura Video con Play Button Overlay -->
+                                <a href="https://www.youtube.com/watch?v=cCof-BwkiYA" target="_blank" rel="noopener noreferrer" class="block relative aspect-video rounded-xl overflow-hidden mb-4 bg-slate-950 border border-white/5">
+                                    <img src="https://img.youtube.com/vi/cCof-BwkiYA/mqdefault.jpg" alt="London Underground Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                                    <div class="absolute inset-0 bg-slate-950/40 flex items-center justify-center group-hover:bg-slate-950/20 transition-all">
+                                        <div class="w-12 h-12 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/50 flex items-center justify-center group-hover:scale-110 group-hover:bg-cyan-500 group-hover:text-slate-950 group-hover:border-transparent transition-all duration-300 shadow-lg shadow-cyan-500/20">
+                                            <i class="fa-solid fa-play text-xs ml-0.5"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <span class="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-2.5 py-1 rounded-md mb-3 inline-block">Engineering</span>
+                                <h3 class="font-bold text-lg text-white mb-2 group-hover:text-cyan-400 transition-colors">LONDON UNDERGROUND</h3>
+                                <p class="text-xs text-slate-400 mb-6">Progettazione esecutiva e modellazione macchina per riqualificazione metropolitana di Londra.</p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=cCof-BwkiYA" target="_blank" rel="noopener noreferrer" class="w-full text-center py-2.5 bg-white/5 hover:bg-cyan-500/20 rounded-xl text-cyan-400 hover:text-white text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Apri su YouTube
+                            </a>
+                        </div>
+
+                        <!-- Card 2: Agitatori MX08 -->
+                        <div class="bg-black/35 p-4 rounded-2xl border border-white/5 hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/5 transition-all flex flex-col justify-between group">
+                            <div>
+                                <a href="https://www.youtube.com/watch?v=vA8vNfODGGg" target="_blank" rel="noopener noreferrer" class="block relative aspect-video rounded-xl overflow-hidden mb-4 bg-slate-950 border border-white/5">
+                                    <img src="https://img.youtube.com/vi/vA8vNfODGGg/mqdefault.jpg" alt="Agitatori MX08 Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                                    <div class="absolute inset-0 bg-slate-950/40 flex items-center justify-center group-hover:bg-slate-950/20 transition-all">
+                                        <div class="w-12 h-12 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/50 flex items-center justify-center group-hover:scale-110 group-hover:bg-cyan-500 group-hover:text-slate-950 group-hover:border-transparent transition-all duration-300 shadow-lg shadow-cyan-500/20">
+                                            <i class="fa-solid fa-play text-xs ml-0.5"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <span class="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-2.5 py-1 rounded-md mb-3 inline-block">Engineering</span>
+                                <h3 class="font-bold text-lg text-white mb-2 group-hover:text-cyan-400 transition-colors">Agitatori MX08</h3>
+                                <p class="text-xs text-slate-400 mb-6">Progettazione esecutiva e modellazione dei sistemi di miscelazione per scavi stradali nella Galleria Monte Ceneri.</p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=vA8vNfODGGg" target="_blank" rel="noopener noreferrer" class="w-full text-center py-2.5 bg-white/5 hover:bg-cyan-500/20 rounded-xl text-cyan-400 hover:text-white text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Apri su YouTube
+                            </a>
+                        </div>
+
+                        <!-- Card 3: A240 Aeroporto -->
+                        <div class="bg-black/35 p-4 rounded-2xl border border-white/5 hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/5 transition-all flex flex-col justify-between group">
+                            <div>
+                                <a href="https://www.youtube.com/watch?v=PjXnU5Oqh88" target="_blank" rel="noopener noreferrer" class="block relative aspect-video rounded-xl overflow-hidden mb-4 bg-slate-950 border border-white/5">
+                                    <img src="https://img.youtube.com/vi/PjXnU5Oqh88/mqdefault.jpg" alt="A240 Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                                    <div class="absolute inset-0 bg-slate-950/40 flex items-center justify-center group-hover:bg-slate-950/20 transition-all">
+                                        <div class="w-12 h-12 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/50 flex items-center justify-center group-hover:scale-110 group-hover:bg-cyan-500 group-hover:text-slate-950 group-hover:border-transparent transition-all duration-300 shadow-lg shadow-cyan-500/20">
+                                            <i class="fa-solid fa-play text-xs ml-0.5"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <span class="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-2.5 py-1 rounded-md mb-3 inline-block">Engineering</span>
+                                <h3 class="font-bold text-lg text-white mb-2 group-hover:text-cyan-400 transition-colors">A240 SYSTEM</h3>
+                                <p class="text-xs text-slate-400 mb-6">Progettazione esecutiva e modellazione macchina per riqualificazione Piste aeroporto di LINATE e MALPENSA.</p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=PjXnU5Oqh88" target="_blank" rel="noopener noreferrer" class="w-full text-center py-2.5 bg-white/5 hover:bg-cyan-500/20 rounded-xl text-cyan-400 hover:text-white text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Apri su YouTube
+                            </a>
+                        </div>
+
+                        <!-- Card 4: C019 Live Bottom -->
+                        <div class="bg-black/35 p-4 rounded-2xl border border-white/5 hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/5 transition-all flex flex-col justify-between group">
+                            <div>
+                                <a href="https://www.youtube.com/watch?v=fikiMHWZLzk" target="_blank" rel="noopener noreferrer" class="block relative aspect-video rounded-xl overflow-hidden mb-4 bg-slate-950 border border-white/5">
+                                    <img src="https://img.youtube.com/vi/fikiMHWZLzk/mqdefault.jpg" alt="C019 Live Bottom Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                                    <div class="absolute inset-0 bg-slate-950/40 flex items-center justify-center group-hover:bg-slate-950/20 transition-all">
+                                        <div class="w-12 h-12 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/50 flex items-center justify-center group-hover:scale-110 group-hover:bg-cyan-500 group-hover:text-slate-950 group-hover:border-transparent transition-all duration-300 shadow-lg shadow-cyan-500/20">
+                                            <i class="fa-solid fa-play text-xs ml-0.5"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <span class="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-2.5 py-1 rounded-md mb-3 inline-block">Engineering</span>
+                                <h3 class="font-bold text-lg text-white mb-2 group-hover:text-cyan-400 transition-colors">C019 Live Bottom</h3>
+                                <p class="text-xs text-slate-400 mb-6">Progettazione esecutiva e modellazione macchina per carico con nastro da 11m.</p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=fikiMHWZLzk" target="_blank" rel="noopener noreferrer" class="w-full text-center py-2.5 bg-white/5 hover:bg-cyan-500/20 rounded-xl text-cyan-400 hover:text-white text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Apri su YouTube
+                            </a>
+                        </div>
+
+                        <!-- Card 5: CIFA Easyfloor (Campata intera per risalto) -->
+                        <div class="bg-black/35 p-4 rounded-2xl border border-white/5 hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/5 transition-all flex flex-col justify-between group sm:col-span-2">
+                            <div>
+                                <a href="https://www.youtube.com/watch?v=dNRcpKKpMT0" target="_blank" rel="noopener noreferrer" class="block relative aspect-video rounded-xl overflow-hidden mb-4 bg-slate-950 border border-white/5">
+                                    <img src="https://img.youtube.com/vi/dNRcpKKpMT0/mqdefault.jpg" alt="CIFA Easyfloor Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                                    <div class="absolute inset-0 bg-slate-950/40 flex items-center justify-center group-hover:bg-slate-950/20 transition-all">
+                                        <div class="w-12 h-12 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/50 flex items-center justify-center group-hover:scale-110 group-hover:bg-cyan-500 group-hover:text-slate-950 group-hover:border-transparent transition-all duration-300 shadow-lg shadow-cyan-500/20">
+                                            <i class="fa-solid fa-play text-xs ml-0.5"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <span class="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-2.5 py-1 rounded-md mb-3 inline-block">Industrial Design</span>
+                                <h3 class="font-bold text-lg text-white mb-2 group-hover:text-cyan-400 transition-colors">CIFA Easyfloor</h3>
+                                <p class="text-xs text-slate-400 mb-6">Ingegnerizzazione del sistema mobile per il pompaggio e la stesura automatizzata di massetti cementizi autolivellanti.</p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=dNRcpKKpMT0" target="_blank" rel="noopener noreferrer" class="w-full text-center py-2.5 bg-white/5 hover:bg-cyan-500/20 rounded-xl text-cyan-400 hover:text-white text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Apri su YouTube
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- -->
+                <!-- Sezione Formazione con Ombreggiatura Neon Glow -->
+                <section class="glass shadow-neon rounded-3xl p-6 sm:p-8 border border-white/10" id="sec-education">
+                    <div class="flex items-center gap-3 mb-6 font-semibold">
+                        <div class="w-8 h-8 rounded-lg bg-cyan-500/20 flex items-center justify-center text-cyan-400">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h2 class="text-xl font-bold text-white uppercase tracking-wider">Formazione</h2>
+                    </div>
+                    <div class="space-y-4 text-slate-300 text-sm">
+                        <div class="flex items-start gap-3">
+                            <span class="text-cyan-400 font-mono font-bold mt-0.5">2014:</span>
+                            <div>
+                                <strong class="text-white">Disegnatore Meccanico CAD/CAM</strong>
+                                <p class="text-xs text-slate-400 mt-0.5">Specializzazione accreditata con Certificazione ufficiale rilasciata dalla Regione Lombardia</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-cyan-400 font-mono font-bold mt-0.5">2013:</span>
+                            <div>
+                                <strong class="text-white">Sicurezza 81/08</strong>
+                                <p class="text-xs text-slate-400 mt-0.5">Specializzazione nella sicurezza sui luoghi di lavoro</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-cyan-400 font-mono font-bold mt-0.5">2004:</span>
+                            <div>
+                                <strong class="text-white">Abilitazione alla Libera Professione</strong>
+                                <p class="text-xs text-slate-400 mt-0.5">Superamento Esame di Stato per l'abilitazione e iscrizione all'Albo dei Geometri</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-cyan-400 font-mono font-bold mt-0.5">2000:</span>
+                            <div>
+                                <strong class="text-white">Diploma di Istituto Tecnico per Geometri</strong>
+                                <p class="text-xs text-slate-400 mt-0.5">Specializzazione tecnica avanzata in disegno tecnico, topografia e statica delle strutture</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar di Destra -->
+            <div class="space-y-8">
+                
+                <!-- Nuova Sezione: Showcase Simulazione CAD -->
+                <section class="glass shadow-neon rounded-3xl p-6 border border-white/10 overflow-hidden group">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-8 rounded-lg bg-cyan-500/20 flex items-center justify-center text-cyan-400">
+                            <i class="fa-solid fa-cube animate-pulse"></i>
+                        </div>
+                        <h2 class="text-lg font-bold text-white uppercase tracking-wider">Simulazione Dinamica</h2>
+                    </div>
+                    
+                    <!-- Box Immagine/GIF con hover zoom -->
+                    <div class="relative rounded-2xl overflow-hidden border border-white/10 bg-slate-950/40 aspect-video mb-4">
+                        <!-- NOTA: Se hai il file .gif sul PC, rinomina 'input_file_0.png' in 'nome_tua_gif.gif' -->
+                        <img src="simulazione.gif" alt="Simulazione Cinematica Albero a Gomiti" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute bottom-2 right-2 bg-slate-950/80 px-2.5 py-1 rounded-md text-[10px] font-mono text-cyan-400 border border-cyan-500/20">
+                            SolidWorks / Inventor
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-sm font-bold text-white mb-1">Gruppo Pistoni & Albero a Gomiti</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Studio cinematico di accoppiamenti dinamici.
+                    </p>
+                </section>
+                
+                <!-- Sezione Competenze con Ombreggiatura Neon Glow -->
+                <section class="glass shadow-neon rounded-3xl p-6 sm:p-8 border border-white/10" id="sec-skills">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-8 h-8 rounded-lg bg-cyan-500/20 flex items-center justify-center text-cyan-400">
+                            <i class="fa-solid fa-sliders"></i>
+                        </div>
+                        <h2 class="text-xl font-bold text-white uppercase tracking-wider">Competenze</h2>
+                    </div>
+                    <div class="text-sm text-slate-300 space-y-6">
+                        <div>
+                            <h4 class="font-bold text-white uppercase text-xs mb-3 tracking-wide text-cyan-400 font-semibold">CAD & Modellazione 3D</h4>
+                            <div class="space-y-3">
+                                <div>
+                                    <div class="flex justify-between text-xs mb-1"><span>Autodesk Inventor</span><span class="text-cyan-400 font-mono">95%</span></div>
+                                    <div class="w-full bg-slate-800/80 h-1.5 rounded-full overflow-hidden"><div class="bg-gradient-to-r from-cyan-600 to-cyan-400 h-1.5 rounded-full" style="width: 95%"></div></div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs mb-1"><span>AutoCAD (2D/3D)</span><span class="text-cyan-400 font-mono">90%</span></div>
+                                    <div class="w-full bg-slate-800/80 h-1.5 rounded-full overflow-hidden"><div class="bg-gradient-to-r from-cyan-600 to-cyan-400 h-1.5 rounded-full" style="width: 95%"></div></div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs mb-1"><span>SolidWorks</span><span class="text-cyan-400 font-mono">80%</span></div>
+                                    <div class="w-full bg-slate-800/80 h-1.5 rounded-full overflow-hidden"><div class="bg-gradient-to-r from-cyan-600 to-cyan-400 h-1.5 rounded-full" style="width: 70%"></div></div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs mb-1"><span>Blender & 3ds Max</span><span class="text-cyan-400 font-mono">75%</span></div>
+                                    <div class="w-full bg-slate-800/80 h-1.5 rounded-full overflow-hidden"><div class="bg-gradient-to-r from-cyan-600 to-cyan-400 h-1.5 rounded-full" style="width: 75%"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white uppercase text-xs mb-2 tracking-wide text-cyan-400 font-semibold">Tecnologie di Produzione</h4>
+                            <div class="flex flex-wrap gap-2 pt-1">
+                                <span class="bg-slate-800/60 border border-slate-700/60 text-slate-300 text-xs px-2.5 py-1 rounded-lg">Carpenteria</span>
+                                <span class="bg-slate-800/60 border border-slate-700/60 text-slate-300 text-xs px-2.5 py-1 rounded-lg">Stampa 3D</span>
+                                <span class="bg-slate-800/60 border border-slate-700/60 text-slate-300 text-xs px-2.5 py-1 rounded-lg">Piegatura Lamiere</span>
+                                <span class="bg-slate-800/60 border border-slate-700/60 text-slate-300 text-xs px-2.5 py-1 rounded-lg">R&D Prototipazione</span>
+                                <span class="bg-slate-800/60 border border-slate-700/60 text-slate-300 text-xs px-2.5 py-1 rounded-lg">Distinte Base (BOM)</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white uppercase text-xs mb-1 tracking-wide text-cyan-400 font-semibold">Rendering & Grafica</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">V-Ray, Cycles, Photoshop, Gimp. Abilità nel trasformare disegni tecnici complessi in immagini fotorealistiche ad alto impatto per riunioni commerciali e direzioni cantieri.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white uppercase text-xs mb-1 tracking-wide text-cyan-400 font-semibold">Lingue & Varie</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Inglese (Tecnico/Discreto) | Italiano (Madrelingua) | Patenti di guida B, C.</p>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

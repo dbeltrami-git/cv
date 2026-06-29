@@ -13,7 +13,6 @@
         /* Griglia blueprint tecnica sovrapposta per richiamare i software di progettazione */
         body {
             background: 
-                /* MODIFICA: Tonalità leggermente più chiara e opacità ridotta a 0.85 per far risaltare l'immagine */
                 linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)),
                 linear-gradient(rgba(6, 182, 212, 0.04) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(6, 182, 212, 0.04) 1px, transparent 1px),
@@ -37,18 +36,17 @@
                         inset 0 1px 0 rgba(255, 255, 255, 0.2);
         }
 
-        /* Classe base Glassmorphism ad alta definizione - Più trasparente di default per intravedere lo sfondo */
+        /* Classe base Glassmorphism ad alta definizione */
         .glass {
-            background: rgba(13, 20, 35, 0.35); /* Reso più trasparente di default */
+            background: rgba(13, 20, 35, 0.35); 
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border: 1px solid rgba(6, 182, 212, 0.12);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        /* Diventa opaco all'attivazione del glow / passaggio del mouse */
         .glass:hover {
             border-color: rgba(6, 182, 212, 0.4);
-            background: rgba(13, 20, 35, 0.85); /* Opaco su hover */
+            background: rgba(13, 20, 35, 0.85);
         }
 
         .code-font {
@@ -71,16 +69,13 @@
             background: rgba(6, 182, 212, 0.6);
         }
 
-        /* Animazione ingranaggio sempre rotante per impostazione predefinita */
+        /* Animazione ingranaggio */
         .gear-spin .fa-gear {
             animation: spin 6s linear infinite;
         }
-
-        /* Arresto e pausa della rotazione alla comparsa dell'opacità hover della scheda */
         .glass:hover .gear-spin .fa-gear {
             animation-play-state: paused;
         }
-
         @keyframes spin {
             100% { transform: rotate(360deg); }
         }
@@ -92,12 +87,10 @@
         
         <!-- Header di Dario con stile Neon Glow Premium e Selettore Lingua -->
         <header class="glass shadow-neon rounded-3xl p-6 sm:p-10 mb-8 border-l-8 border-cyan-500 relative overflow-hidden transition-all duration-500" id="main-header">
-            <!-- Cerchio luminoso d'accento di sfondo -->
             <div class="absolute top-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl -z-10"></div>
             
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 relative z-10">
                 <div class="w-full">
-                    <!-- Selettore Lingua fluttuante premium -->
                     <div class="absolute top-0 right-0 flex items-center gap-1 bg-slate-950/60 p-1.5 rounded-2xl border border-white/10 shadow-lg">
                         <button onclick="switchLanguage('it')" id="lang-it" class="px-3 py-1 text-xs font-bold rounded-xl transition-all duration-300 bg-cyan-500 text-slate-950 shadow-md shadow-cyan-500/20">ITA</button>
                         <button onclick="switchLanguage('en')" id="lang-en" class="px-3 py-1 text-xs font-bold rounded-xl transition-all duration-300 text-slate-400 hover:text-slate-100">ENG</button>
@@ -111,7 +104,12 @@
                         <span data-lang="en" class="hidden">Mechanical Design & 3D Modelling Specialist</span>
                     </p>
                     
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs sm:text-sm text-slate-300">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 text-xs sm:text-sm text-slate-300">
+                        <span class="flex items-center gap-2">
+                            <i class="fa-solid fa-user text-cyan-500 w-4"></i> 
+                            <span data-lang="it"><span id="age-it"></span> anni</span>
+                            <span data-lang="en" class="hidden"><span id="age-en"></span> years old</span>
+                        </span>
                         <span class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-cyan-500 w-4"></i> Brescia, Italia</span>
                         <a href="mailto:d.beltrami@gmail.com" class="flex items-center gap-2 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-envelope text-cyan-500 w-4"></i> d.beltrami@gmail.com</a>
                         <a href="tel:+393281022406" class="flex items-center gap-2 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-phone text-cyan-500 w-4"></i> +39 328 10 22 406</a>
@@ -129,7 +127,6 @@
         <div class="grid lg:grid-cols-3 gap-8">
             <div class="lg:col-span-2 space-y-8">
                 
-                <!-- Sezione Esperienze con Linea del Tempo interattiva -->
                 <section class="glass shadow-neon rounded-3xl p-6 sm:p-8 border border-white/10" id="sec-experience">
                     <div class="flex items-center gap-3 mb-6 gear-spin">
                         <div class="w-8 h-8 rounded-lg bg-cyan-500/20 flex items-center justify-center text-cyan-400 transition-transform">
@@ -142,9 +139,7 @@
                     </div>
                     
                     <div class="relative border-l-2 border-slate-700 ml-3 pl-6 space-y-8">
-                        <!-- Esperienza 1 -->
                         <div class="relative group">
-                            <!-- Nodo temporale attivo e pulsante di bagliore -->
                             <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-cyan-500 border-4 border-slate-900 group-hover:scale-125 transition-transform duration-300 shadow-lg shadow-cyan-500/50"></div>
                             <h3 class="font-bold text-lg text-white">
                                 <a href="https://blendplants.com/" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors inline-flex items-center gap-2 group/link">
@@ -172,7 +167,6 @@
                             </ul>
                         </div>
                         
-                        <!-- Esperienza 2 -->
                         <div class="relative group">
                             <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-600 border-4 border-slate-900 group-hover:bg-cyan-400 group-hover:scale-125 transition-all duration-300"></div>
                             <h3 class="font-bold text-lg text-white group-hover:text-cyan-400 transition-colors">Baires S.r.l.</h3>
@@ -190,7 +184,6 @@
                             </p>
                         </div>
                         
-                        <!-- Esperienza 3 -->
                         <div class="relative group">
                             <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-600 border-4 border-slate-900 group-hover:bg-cyan-400 group-hover:scale-125 transition-all duration-300"></div>
                             <h3 class="font-bold text-lg text-white group-hover:text-cyan-400 transition-colors">Dracoprogetti S.r.l.</h3>
@@ -210,7 +203,6 @@
                     </div>
                 </section>
 
-                <!-- Sezione Portfolio con miniature reali di YouTube -->
                 <section id="sec-portfolio" class="glass shadow-neon rounded-3xl p-6 sm:p-8 border border-white/10">
                     <div class="flex items-center gap-3 mb-6 gear-spin">
                         <div class="w-8 h-8 rounded-lg bg-cyan-500/20 flex items-center justify-center text-cyan-400">
@@ -224,18 +216,17 @@
                     
                     <div class="grid sm:grid-cols-2 gap-6">
 
-                        <!-- Card 1: London Underground -->
+                        <!-- Card 1: London Underground (Facade) -->
                         <div class="bg-black/35 p-4 rounded-2xl border border-white/5 hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/5 transition-all flex flex-col justify-between group">
                             <div>
-                                <!-- Miniatura Video con Play Button Overlay -->
-                                <a href="https://www.youtube.com/watch?v=cCof-BwkiYA" target="_blank" rel="noopener noreferrer" class="block relative aspect-video rounded-xl overflow-hidden mb-4 bg-slate-950 border border-white/5">
-                                    <img src="https://img.youtube.com/vi/cCof-BwkiYA/mqdefault.jpg" alt="London Underground Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
-                                    <div class="absolute inset-0 bg-slate-950/40 flex items-center justify-center group-hover:bg-slate-950/20 transition-all">
-                                        <div class="w-12 h-12 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/50 flex items-center justify-center group-hover:scale-110 group-hover:bg-cyan-500 group-hover:text-slate-950 group-hover:border-transparent transition-all duration-300 shadow-lg shadow-cyan-500/20">
+                                <div class="block relative aspect-video rounded-xl overflow-hidden mb-4 bg-slate-950 border border-white/5 cursor-pointer group/video" onclick="loadVideo(this, 'cCof-BwkiYA')">
+                                    <img src="https://img.youtube.com/vi/cCof-BwkiYA/mqdefault.jpg" alt="London Underground Thumbnail" class="w-full h-full object-cover group-hover/video:scale-105 transition-transform duration-500 opacity-80 group-hover/video:opacity-100">
+                                    <div class="absolute inset-0 bg-slate-950/40 flex items-center justify-center group-hover/video:bg-slate-950/20 transition-all">
+                                        <div class="w-12 h-12 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/50 flex items-center justify-center group-hover/video:scale-110 group-hover/video:bg-cyan-500 group-hover/video:text-slate-950 group-hover/video:border-transparent transition-all duration-300 shadow-lg shadow-cyan-500/20">
                                             <i class="fa-solid fa-play text-xs ml-0.5"></i>
                                         </div>
                                     </div>
-                                </a>
+                                </div>
                                 <span class="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-2.5 py-1 rounded-md mb-3 inline-block">Industrial Design</span>
                                 <h3 class="font-bold text-lg text-white mb-2 group-hover:text-cyan-400 transition-colors">LONDON UNDERGROUND</h3>
                                 
@@ -249,7 +240,7 @@
                             </a>
                         </div>
 
-                        <!-- Card 2: Agitatori MX08 -->
+                        <!-- Card 2: Agitatori MX08 (Intatta come originale) -->
                         <div class="bg-black/35 p-4 rounded-2xl border border-white/5 hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/5 transition-all flex flex-col justify-between group">
                             <div>
                                 <a href="https://www.youtube.com/watch?v=vA8vNfODGGg" target="_blank" rel="noopener noreferrer" class="block relative aspect-video rounded-xl overflow-hidden mb-4 bg-slate-950 border border-white/5">
@@ -273,17 +264,17 @@
                             </a>
                         </div>
 
-                        <!-- Card 3: A240 Aeroporto -->
+                        <!-- Card 3: A240 Aeroporto (Facade) -->
                         <div class="bg-black/35 p-4 rounded-2xl border border-white/5 hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/5 transition-all flex flex-col justify-between group">
                             <div>
-                                <a href="https://www.youtube.com/watch?v=PjXnU5Oqh88" target="_blank" rel="noopener noreferrer" class="block relative aspect-video rounded-xl overflow-hidden mb-4 bg-slate-950 border border-white/5">
-                                    <img src="https://img.youtube.com/vi/PjXnU5Oqh88/mqdefault.jpg" alt="A240 Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
-                                    <div class="absolute inset-0 bg-slate-950/40 flex items-center justify-center group-hover:bg-slate-950/20 transition-all">
-                                        <div class="w-12 h-12 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/50 flex items-center justify-center group-hover:scale-110 group-hover:bg-cyan-500 group-hover:text-slate-950 group-hover:border-transparent transition-all duration-300 shadow-lg shadow-cyan-500/20">
+                                <div class="block relative aspect-video rounded-xl overflow-hidden mb-4 bg-slate-950 border border-white/5 cursor-pointer group/video" onclick="loadVideo(this, 'PjXnU5Oqh88')">
+                                    <img src="https://img.youtube.com/vi/PjXnU5Oqh88/mqdefault.jpg" alt="A240 Thumbnail" class="w-full h-full object-cover group-hover/video:scale-105 transition-transform duration-500 opacity-80 group-hover/video:opacity-100">
+                                    <div class="absolute inset-0 bg-slate-950/40 flex items-center justify-center group-hover/video:bg-slate-950/20 transition-all">
+                                        <div class="w-12 h-12 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/50 flex items-center justify-center group-hover/video:scale-110 group-hover/video:bg-cyan-500 group-hover/video:text-slate-950 group-hover/video:border-transparent transition-all duration-300 shadow-lg shadow-cyan-500/20">
                                             <i class="fa-solid fa-play text-xs ml-0.5"></i>
                                         </div>
                                     </div>
-                                </a>
+                                </div>
                                 <span class="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-2.5 py-1 rounded-md mb-3 inline-block">Industrial Design</span>
                                 <h3 class="font-bold text-lg text-white mb-2 group-hover:text-cyan-400 transition-colors">A240 SYSTEM</h3>
                                 
@@ -298,17 +289,17 @@
                         </div>
 
 
-                        <!-- Card 4: CIFA Easyfloor (Campata intera per risalto) -->
+                        <!-- Card 4: CIFA Easyfloor (Facade) -->
                          <div class="bg-black/35 p-4 rounded-2xl border border-white/5 hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/5 transition-all flex flex-col justify-between group">
                             <div>
-                                <a href="https://www.youtube.com/watch?v=dNRcpKKpMT0" target="_blank" rel="noopener noreferrer" class="block relative aspect-video rounded-xl overflow-hidden mb-4 bg-slate-950 border border-white/5">
-                                    <img src="https://img.youtube.com/vi/dNRcpKKpMT0/mqdefault.jpg" alt="CIFA Easyfloor Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
-                                    <div class="absolute inset-0 bg-slate-950/40 flex items-center justify-center group-hover:bg-slate-950/20 transition-all">
-                                        <div class="w-12 h-12 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/50 flex items-center justify-center group-hover:scale-110 group-hover:bg-cyan-500 group-hover:text-slate-950 group-hover:border-transparent transition-all duration-300 shadow-lg shadow-cyan-500/20">
+                                <div class="block relative aspect-video rounded-xl overflow-hidden mb-4 bg-slate-950 border border-white/5 cursor-pointer group/video" onclick="loadVideo(this, 'dNRcpKKpMT0')">
+                                    <img src="https://img.youtube.com/vi/dNRcpKKpMT0/mqdefault.jpg" alt="CIFA Easyfloor Thumbnail" class="w-full h-full object-cover group-hover/video:scale-105 transition-transform duration-500 opacity-80 group-hover/video:opacity-100">
+                                    <div class="absolute inset-0 bg-slate-950/40 flex items-center justify-center group-hover/video:bg-slate-950/20 transition-all">
+                                        <div class="w-12 h-12 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/50 flex items-center justify-center group-hover/video:scale-110 group-hover/video:bg-cyan-500 group-hover/video:text-slate-950 group-hover/video:border-transparent transition-all duration-300 shadow-lg shadow-cyan-500/20">
                                             <i class="fa-solid fa-play text-xs ml-0.5"></i>
                                         </div>
                                     </div>
-                                </a>
+                                </div>
                                 <span class="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-2.5 py-1 rounded-md mb-3 inline-block">Industrial Design</span>
                                 <h3 class="font-bold text-lg text-white mb-2 group-hover:text-cyan-400 transition-colors">CIFA Easyfloor</h3>
                                 
@@ -322,17 +313,17 @@
                             </a>
                         </div>
                         
-                        <!-- Card 5: C019 Live Bottom -->
+                        <!-- Card 5: C019 Live Bottom (Facade) -->
                        <div class="bg-black/35 p-4 rounded-2xl border border-white/5 hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/5 transition-all flex flex-col justify-between group sm:col-span-2">
                             <div>
-                                <a href="https://www.youtube.com/watch?v=fikiMHWZLzk" target="_blank" rel="noopener noreferrer" class="block relative aspect-video rounded-xl overflow-hidden mb-4 bg-slate-950 border border-white/5">
-                                    <img src="https://img.youtube.com/vi/fikiMHWZLzk/mqdefault.jpg" alt="C019 Live Bottom Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
-                                    <div class="absolute inset-0 bg-slate-950/40 flex items-center justify-center group-hover:bg-slate-950/20 transition-all">
-                                        <div class="w-12 h-12 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/50 flex items-center justify-center group-hover:scale-110 group-hover:bg-cyan-500 group-hover:text-slate-950 group-hover:border-transparent transition-all duration-300 shadow-lg shadow-cyan-500/20">
+                                <div class="block relative aspect-video rounded-xl overflow-hidden mb-4 bg-slate-950 border border-white/5 cursor-pointer group/video" onclick="loadVideo(this, 'fikiMHWZLzk')">
+                                    <img src="https://img.youtube.com/vi/fikiMHWZLzk/mqdefault.jpg" alt="C019 Live Bottom Thumbnail" class="w-full h-full object-cover group-hover/video:scale-105 transition-transform duration-500 opacity-80 group-hover/video:opacity-100">
+                                    <div class="absolute inset-0 bg-slate-950/40 flex items-center justify-center group-hover/video:bg-slate-950/20 transition-all">
+                                        <div class="w-12 h-12 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/50 flex items-center justify-center group-hover/video:scale-110 group-hover/video:bg-cyan-500 group-hover/video:text-slate-950 group-hover/video:border-transparent transition-all duration-300 shadow-lg shadow-cyan-500/20">
                                             <i class="fa-solid fa-play text-xs ml-0.5"></i>
                                         </div>
                                     </div>
-                                </a>
+                                </div>
                                 <span class="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-2.5 py-1 rounded-md mb-3 inline-block">Industrial Design</span>
                                 <h3 class="font-bold text-lg text-white mb-2 group-hover:text-cyan-400 transition-colors">C019 Live Bottom</h3>
                                 
@@ -349,7 +340,6 @@
                     </div>
                 </section>
 
-                <!-- Sezione Formazione con Ombreggiatura Neon Glow -->
                 <section class="glass shadow-neon rounded-3xl p-6 sm:p-8 border border-white/10" id="sec-education">
                     <div class="flex items-center gap-3 mb-6 font-semibold">
                         <div class="w-8 h-8 rounded-lg bg-cyan-500/20 flex items-center justify-center text-cyan-400">
@@ -412,7 +402,6 @@
             <!-- Sidebar di Destra -->
             <div class="space-y-8">
                 
-                <!-- Sezione Showcase CAD -->
                 <section class="glass shadow-neon rounded-3xl p-6 border border-white/10 overflow-hidden group">
                     <div class="flex items-center gap-3 mb-4">
                         <div class="w-8 h-8 rounded-lg bg-cyan-500/20 flex items-center justify-center text-cyan-400">
@@ -424,7 +413,6 @@
                         </h2>
                     </div>
                     
-                    <!-- Box Immagine/GIF con hover zoom - Riferimento Verbatim al file d'immagine -->
                     <div class="relative rounded-2xl overflow-hidden border border-white/10 bg-slate-950/40 aspect-video mb-4">
                         <img src="SIMULAZIONE.gif" alt="Simulazione Cinematica Albero a Gomiti" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute bottom-2 right-2 bg-slate-950/80 px-2.5 py-1 rounded-md text-[10px] font-mono text-cyan-400 border border-cyan-500/20">
@@ -442,7 +430,6 @@
                     </p>
                 </section>
                 
-                <!-- Sezione Competenze con Ombreggiatura Neon Glow -->
                 <section class="glass shadow-neon rounded-3xl p-6 sm:p-8 border border-white/10" id="sec-skills">
                     <div class="flex items-center gap-3 mb-6">
                         <div class="w-8 h-8 rounded-lg bg-cyan-500/20 flex items-center justify-center text-cyan-400">
@@ -522,10 +509,15 @@
         </div>
     </main>
 
-    <!-- Logica di Switch Linguaggio Multilingua -->
+    <!-- Logica di Scripting -->
     <script>
+        // Sostituisce l'immagine della Card con il player YouTube al click
+        function loadVideo(element, videoId) {
+            element.innerHTML = `<iframe class="w-full h-full absolute top-0 left-0" src="https://www.youtube.com/embed/${videoId}?autoplay=1" title="YouTube Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+        }
+
+        // Switch Lingua
         function switchLanguage(lang) {
-            // Toggles text elements with language attribute values
             const elementsIT = document.querySelectorAll('[data-lang="it"]');
             const elementsEN = document.querySelectorAll('[data-lang="en"]');
             
@@ -533,18 +525,34 @@
                 elementsIT.forEach(el => el.classList.remove('hidden'));
                 elementsEN.forEach(el => el.classList.add('hidden'));
                 
-                // Update active states on switcher button elements
                 document.getElementById('lang-it').className = "px-3 py-1 text-xs font-bold rounded-xl transition-all duration-300 bg-cyan-500 text-slate-950 shadow-md shadow-cyan-500/20";
                 document.getElementById('lang-en').className = "px-3 py-1 text-xs font-bold rounded-xl transition-all duration-300 text-slate-400 hover:text-slate-100";
             } else {
                 elementsIT.forEach(el => el.classList.add('hidden'));
                 elementsEN.forEach(el => el.classList.remove('hidden'));
                 
-                // Update active states on switcher button elements
                 document.getElementById('lang-en').className = "px-3 py-1 text-xs font-bold rounded-xl transition-all duration-300 bg-cyan-500 text-slate-950 shadow-md shadow-cyan-500/20";
                 document.getElementById('lang-it').className = "px-3 py-1 text-xs font-bold rounded-xl transition-all duration-300 text-slate-400 hover:text-slate-100";
             }
         }
+
+        // Calcolo automatico dell'età
+        function calculateAge(birthDateString) {
+            const today = new Date();
+            const birthDate = new Date(birthDateString);
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const m = today.getMonth() - birthDate.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            return age;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const age = calculateAge('1981-12-22');
+            document.getElementById('age-it').textContent = age;
+            document.getElementById('age-en').textContent = age;
+        });
     </script>
 </body>
 </html>
